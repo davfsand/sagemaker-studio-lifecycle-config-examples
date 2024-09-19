@@ -41,7 +41,7 @@ EOF
 chmod +x .auto-shutdown/set-time-interval.sh
 
 # "wget" is not part of the base Jupyter Server image, you need to install it first if needed to download the tarball
-sudo yum -y update
+sudo apt -y update
 sudo apt install -y wget ca-certificates
 # You can download the tarball from GitHub or alternatively, if you're using VPCOnly mode, you can host on S3
 wget -O .auto-shutdown/extension.tar.gz https://github.com/aws-samples/sagemaker-studio-auto-shutdown-extension/raw/main/sagemaker_studio_autoshutdown-0.1.5.tar.gz
